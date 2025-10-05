@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplikasi DANA Davigo - Layanan Lengkap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- CSS Custom kamu -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 relative">
+    
+  
+
+    <!-- ======= HEADER SALDO (Fixed Structure) ======= -->
+<header id="header-saldo" class="bg-gradient-to-r from-blue-700 to-blue-600 pt-10 pb-16 relative overflow-hidden">
+    <!-- ATAS: USER + TOMBOL REFRESH sejajar -->
+    <div class="px-4 flex justify-between items-center mb-4">
+        
+        <!-- Bagian kiri: Foto + Nama + Email -->
+        <div class="flex items-center space-x-3">
+            <div class="relative">
+                <div class="w-11 h-11 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden ring-2 ring-white/30">
+                    <img src="https://raw.githubusercontent.com/dfandrn/img/main/file_00000000c58861f88d9f9aa1da1a063a%20(1).png" 
+                         alt="Profile" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+            </div>
+            <div>
+                <h1 class="text-white font-bold text-xl tracking-tight">DaviCash</h1>
+                <div class="flex items-center space-x-2 mt-1">
+                    <span class="inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium bg-white/20 text-white backdrop-blur-sm">
+                        <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Verified
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian kanan: Tombol Refresh -->
+        <button id="refreshSaldoBtn" class="flex flex-col items-center text-white/90 hover:text-white group smooth-transition">
+            <div class="relative p-3 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-200">
+                <svg id="refreshIcon" class="w-6 h-6 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                <div id="loadingSpinner" class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            <span id="refreshText" class="text-xs font-medium mt-1 group-hover:text-white transition-colors">Refresh</span>
+        </button>
+    </div>
+
+    <!-- CARD SALDO (z-20 agar di atas wave, dengan space kecil di bawah) -->
+    <div id="saldoCard" class="bg-white rounded-xl mx-4 p-4 shadow-md -mb-10 relative z-20">
+        <div class="flex justify-between items-center mb-2">
+            <div>
+                <p class="text-sm text-gray-600">Saldo Anda</p>
+                <div class="flex items-center space-x-2">
+                    <p class="font-bold text-2xl text-gray-800 balance-number">Rp<span id="balance">1.487.500</span></p>
+                    <!-- Eye icon kecil, di kanan saldo -->
+                    <button id="toggleSaldoBtn" class="p-1 rounded-full bg-gray-100 border border-gray-300 smooth-transition hover:bg-gray-200">
+                        <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-sm text-gray-600">Poin Anda</p>
+                <p class="text-base font-bold text-gray-700"><span id="poin">0</span> Poin</p>
+            </div>
+        </div>
+
+        <!-- MENU HORIZONTAL BUTTONS - SIDE BY SIDE -->
+        <div class="flex gap-3 mt-6 border-t pt-5">
+          <!-- TopUp -->
+          <button id="topUpBtn" class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-700 hover:bg-gray-100 smooth-transition">
+            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+            <span class="text-sm font-medium">Isi Saldo</span>
+          </button>
+          
+          <!-- Withdraw -->
+          <button id="withdrawBtn" class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-700 hover:bg-gray-100 smooth-transition">
+            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+            </svg>
+            <span class="text-sm font-medium">Tarik Dana</span>
+          </button>
+        </div>
+    </div>
+
+    <!-- EFEK WAVE DI BAWAH HEADER (lebih kompak, z-0, pointer-events-none) -->
+    <div class="absolute bottom-0 left-0 w-full h-16 z-0 pointer-events-none">
+        <svg class="w-full h-full" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Defs untuk gradient (biru ke transparan putih) -->
+            <defs>
+                <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#1d4ed8;stop-opacity:0.4" />
+                    <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:0.7" />
+                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.2" />
+                </linearGradient>
+            </defs>
+            
+            <!-- Lapisan belakang (gelombang lebar, opacity rendah) -->
+            <path d="M0,30 C360,40 1080,20 1440,30 L1440,60 L0,60 Z" 
+                  fill="url(#waveGrad)" opacity="0.4">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="12s" repeatCount="indefinite" />
+            </path>
+            
+            <!-- Lapisan tengah (gelombang sedang, opacity sedang) -->
+            <path d="M0,35 C360,45 1080,25 1440,35 L1440,60 L0,60 Z" 
+                  fill="url(#waveGrad)" opacity="0.7">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="12s" repeatCount="indefinite" begin="4s" />
+            </path>
+            
+            <!-- Lapisan depan (gelombang halus, opacity tinggi) -->
+            <path d="M0,25 C360,35 1080,15 1440,25 L1440,60 L0,60 Z" 
+                  fill="url(#waveGrad)" opacity="1">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 0,-1; 0,0" dur="12s" repeatCount="indefinite" begin="8s" />
+            </path>
+        </svg>
+    </div>
+</header>
+
+
+<!-- ======= MAIN (UPGRADED SLIM) ======= -->
+<main id="mainScroll" class="pb-24 overflow-y-auto with-bottom-space" style="height: calc(100% - 230px)">
+
+
+    <!-- STICKY SALDO DISPLAY - Simple Version -->
+    <div id="stickySaldo" class="sticky-saldo">
+      <div class="sticky-content">
+        <div class="flex items-center space-x-3">
+          <p class="text-sm font-medium text-gray-600">Saldo:</p>
+          <p class="font-bold text-lg text-gray-800 balance-number">Rp<span id="stickyBalance">1.487.500</span></p>
+          <button id="toggleStickySaldoBtn" class="p-1 rounded-full bg-gray-100 border border-gray-300 smooth-transition hover:bg-gray-200">
+            <svg id="stickyEyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </button>
+        </div>
+        <div class="text-right">
+          <p class="text-sm font-medium text-gray-600"><span id="stickyPoin">0</span> Poin</p>
+        </div>
+      </div>
+    </div>
+    
+  <!-- Section: Beranda -->
+  <section id="homeSection" class="p-5">
+
+    <!-- Card Layanan -->
+    <div class="bg-white rounded-2xl shadow-lg p-4 relative overflow-hidden">
+
+
+      <!-- Grid Menu (4 kolom lebih ramping) -->
+      <div class="grid grid-cols-4 gap-3">
+
+        <!-- Pulsa/Data -->
+        <button id="pulsaDataBtn"
+          class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+                 hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+                 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041883.png"
+            alt="Pulsa Data" class="w-8 h-8 object-contain mb-1">
+          <span class="text-[11px] font-semibold text-gray-700 text-center">
+            Pulsa/Data
+          </span>
+        </button>
+
+        <!-- Listrik -->
+        <button id="listrikBtn"
+          class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+                 hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+                 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+          <img src="https://img.icons8.com/color/48/electricity.png"
+            alt="Token Listrik" class="w-8 h-8 object-contain mb-1">
+          <span class="text-[11px] font-semibold text-gray-700 text-center">
+            Listrik
+          </span>
+        </button>
+
+        <!-- Top Up Game -->
+        <button id="topUpGameBtn"
+          class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+                 hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+                 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+          <img src="https://raw.githubusercontent.com/dfandrn/Gambar/refs/heads/main/file_00000000232c622fa29bb39098993afc.png"
+            alt="Top Up Game" class="w-8 h-8 object-contain mb-1">
+          <span class="text-[11px] font-semibold text-gray-700 text-center">
+            Top Up Game
+          </span>
+        </button>
+
+        <!-- Davigo Point -->
+        <button id="davigoPointBtn"
+          class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+                 hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+                 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+          <img src="https://raw.githubusercontent.com/dfandrn/Gambar/main/Picsart_25-09-07_11-41-37-689.png"
+            alt="Davigo Point" class="w-8 h-8 object-contain mb-1">
+          <span class="text-[11px] font-semibold text-gray-700 text-center">
+            Davigo Point
+          </span>
+        </button>
+
+        <!-- All Menu -->
+        <button id="trigger"
+          class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+                 hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+                 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <span class="text-[11px] font-semibold text-gray-700 text-center">
+            All Menu
+          </span>
+        </button>
+
+        <!-- Promo Google Play -->
+        <button id="gplayPromoBtn"
+          class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+                 hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+                 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+          <img src="https://raw.githubusercontent.com/dfandrn/Gambar/main/Picsart_25-09-06_19-38-40-018.jpg"
+            alt="Google Play" class="w-10 h-10 object-contain mb-1">
+          <span class="text-[11px] font-semibold text-gray-700 text-center">
+            Google Play
+          </span>
+        </button>
+
+<!-- Tombol GoFood -->
+<button id="gf-btn"
+  class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+         hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+         hover:shadow-lg hover:-translate-y-1 active:scale-95">
+  <img src="https://raw.githubusercontent.com/dfandrn/Gambar/main/Picsart_25-09-07_11-41-06-967.png"
+    alt="GoFood" class="w-10 h-10 object-contain mb-1">
+  <span class="text-[11px] font-semibold text-gray-700 text-center">GoFood</span>
+</button>
+
+        <!-- E-Money -->
+        <button id="emoneyBtn"
+          class="feature-card flex flex-col items-center p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white 
+                 hover:from-blue-50 hover:to-blue-100 shadow-md transition-all duration-300 
+                 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+          <img src="https://img.icons8.com/color/48/sim-card-chip.png"
+            alt="E-Money" class="w-8 h-8 object-contain mb-1">
+          <span class="text-[11px] font-semibold text-gray-700 text-center">
+            E-Money
+          </span>
+        </button>
+
+      </div>
+    </div>
+ 
+
+<!--  notif kecil -->
+<div class="notif-group">
+
+  <!-- Notifikasi kecil -->
+  <div class="notif-small" id="notifSmall">
+    <div class="left">
+      <span class="notif-text-wrapper glitch" data-text="📣 Beberapa orang 👉 🎁 DANA Deals oleh 👩‍👩‍👦">
+        📣 Beberapa orang 👉 🎁 <strong>DAVIGO Deals</strong> oleh 👩‍👩‍👦
+      </span> 
+    </div>
+    <div class="right">
+      <span class="notif-text-wrapper glitch" data-text="🔥">🔥</span>
+    </div>
+  </div>
+
+  <!-- Notifikasi besar chat 1 -->
+  <div class="notif-card" id="notifCard1">
+    <div class="notif-left">
+      <div class="notif-icon">
+        <img src="https://placehold.co/36x36/00AEEF/FFFFFF?text=%F0%9F%91%A5" alt="Teman" id="notifCard1Icon">
+      </div>
+      <div class="notif-text" id="notifCard1Text">
+        <strong>Temanmu</strong> 👉 🎁 dari 👥
+      </div>
+    </div>
+    <div class="notif-time" id="notifCard1Time">7d</div>
+  </div>
+
+  <!-- Notifikasi besar chat 2 (lebih kecil dan rapat) -->
+  <div class="notif-card" id="notifCard2">
+    <div class="notif-left">
+      <div class="notif-icon">
+        <img src="https://placehold.co/36x36/0044CC/FFFFFF?text=%F0%9F%9A%9A" alt="DANA" id="notifCard2Icon">
+      </div>
+      <div class="notif-text" id="notifCard2Text">
+        <strong>Kamu</strong> Bayar STNK praktis via e-Samsat di DAVIGO
+      </div>
+    </div>
+    <div class="notif-time" id="notifCard2Time">9m</div>
+  </div>
+</div>
+
+
+<!-- promo slider -->
+<div class="promo-slider">
+  <div class="slider-container" id="promoSlider">
+    <div class="slide"><img src="https://placehold.co/600x200/00AAEF/FFFFFF?text=Cashback+pulsa+15%"></div>
+    <div class="slide"><img src="https://placehold.co/600x200/00AAEF/FFFFFF?text=Cashback+Listrik+50%"></div>
+    <div class="slide"><img src="https://placehold.co/600x200/00AAEF/FFFFFF?text=Google+Play+Voucher"></div>
+    <div class="slide"><img src="https://placehold.co/600x200/00AAEF/FFFFFF?text=Top+Up+Game+Bonus"></div>
+    <div class="slide"><img src="https://placehold.co/600x200/00AAEF/FFFFFF?text=Paket+Data+Ekstra"></div>
+  </div>
+</div>
+
+
+<!-- DANA Protection -->
+<div class="container">
+  <!-- Protection Section -->
+  <div class="section protection-section">
+    <!-- Header biru -->
+    <div class="protection-header">
+      <div class="header-left">
+        <svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 24 24">
+          <path d="M12 1L3 5v6c0 5 3.7 10.74 9 12 5.3-1.26 9-7 9-12V5l-9-4zM10.59 15.58l-3.17-3.17 1.41-1.41 1.76 1.76 5.76-5.76 1.41 1.41-7.17 7.17z"/>
+        </svg>
+        <span class="header-text">5 aktivitas terlindungi!</span>
+      </div>
+      <svg class="icon-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 24 24">
+        <path d="M9 18l6-6-6-6" />
+      </svg>
+    </div>
+    <!-- Garis putih kecil -->
+    <div class="header-divider"></div>
+
+    <!-- Search -->
+    <input type="search" placeholder="Ada nomor telepon mencurigakan?" class="input-search" />
+
+    <!-- Action -->
+    <div class="protection-action">
+      <div class="protection-label">
+        <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#007AFF" viewBox="0 0 24 24">
+          <path d="M12 17a2 2 0 100-4 2 2 0 000 4zm6-7h-1V7a5 5 0 00-10 0v3H6a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2v-6a2 2 0 00-2-2zm-6-4a3 3 0 013 3v3H9V9a3 3 0 013-3z"/>
+        </svg>
+        <span class="protection-text">DANA PROTECTION</span>
+      </div>
+      <button class="btn-secure"><span>20%</span> AMANKAN</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Deals Section -->
+  <div class="section deals-section">
+    <div class="deals-header">
+      <h3>DANA Deals</h3>
+      <button class="btn-explore">TELUSURI</button>
+    </div>
+
+    <div class="voucher voucher-blue">
+      <div class="voucher-info">
+        <div class="voucher-label">Paket Voucher</div>
+        <div class="voucher-value">Rp <b>1.000</b></div>
+        <div class="voucher-desc">Belanja Online</div>
+      </div>
+      <div class="voucher-price">Rp100</div>
+      <div class="discount-badge">-90%</div>
+    </div>
+    <div class="voucher voucher-yellow">
+      <div class="voucher-info">
+        <div class="voucher-label">Paket Voucher</div>
+        <div class="voucher-value">Rp <b>3.000</b></div>
+        <div class="voucher-desc">Belanja Online</div>
+      </div>
+      <div class="voucher-price">Rp500</div>
+      <div class="discount-badge">-83%</div>
+    </div>
+  </div>
+
+  <!-- News / Latest Section -->
+  <div class="section news-section">
+    <div class="news-header">
+      <h3>Terbaru Untukmu</h3>
+      <button class="btn-see-all">LIHAT SEMUA</button>
+    </div>
+    <p class="news-subtext">Kabar terbaik minggu ini!</p>
+    <ul class="news-list">
+      <li>
+        <img src="https://i.ibb.co/0B4m2Lh/lock-icon.png" alt="lock icon" class="news-icon" />
+        <div>
+          <strong>Jaminan Anti Pending</strong><br/>
+          <small>#AmanDariBadman
