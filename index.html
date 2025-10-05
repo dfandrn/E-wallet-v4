@@ -381,7 +381,7 @@
     </div>
   </div>
 
-  <!-- News / Latest Section -->
+    <!-- News / Latest Section -->
   <div class="section news-section">
     <div class="news-header">
       <h3>Terbaru Untukmu</h3>
@@ -393,4 +393,1190 @@
         <img src="https://i.ibb.co/0B4m2Lh/lock-icon.png" alt="lock icon" class="news-icon" />
         <div>
           <strong>Jaminan Anti Pending</strong><br/>
-          <small>#AmanDariBadman
+          <small>#AmanDariBadman</small>
+        </div>
+      </li>
+      <li>
+        <img src="https://i.ibb.co/qs0T6W0/truck-icon.png" alt="truck icon" class="news-icon" />
+        <div>
+          <strong>Posko Bantuan Keliling</strong><br/>
+          <small>Nikmatin layanan prioritas buatmu</small>
+        </div>
+      </li>
+      <li>
+        <img src="https://i.ibb.co/SXZjQfs/warning-icon.png" alt="warning icon" class="news-icon" />
+        <div>
+          <strong>STOP JUDI ONLINE</strong><br/>
+          <small>Untung Sesaat, Sesat Kemudian</small>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+<!-- ====== Section Promo Kecil Full White ====== -->
+<div class="bg-white text-gray-900 rounded-lg shadow w-full max-w-sm mx-auto overflow-hidden mt-6">
+  <!-- Bagian Atas: Judul + Tombol -->
+  <div class="p-3 flex items-center justify-between">
+    <h2 class="text-sm font-semibold truncate pr-2">
+      Klaim 150rb kamu sekarang!
+    </h2>
+    <a 
+      id="promoBtn"
+      href="#"
+      class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 whitespace-nowrap">
+      Mulai <span>→</span>
+    </a>
+  </div>
+
+  <!-- Deskripsi -->
+  <div class="px-3 pb-2 text-center">
+    <p class="text-xs text-gray-600 leading-snug">
+      Ada hadiah Davigo Saldo s.d. <span class="font-bold text-gray-900">150.000</span> buat kamu.  
+      Buruan dapetin sebelum kehabisan!
+    </p>
+    <p class="mt-1 text-xs font-semibold text-green-600">
+      Ayo dapetin sekarang!
+    </p>
+  </div>
+
+  <!-- Foto Promo Full Width -->
+  <img 
+    src="https://github.com/dfandrn/aplikasitab/blob/main/file_000000005c1861f5b144d2b6ce52d86e.png?raw=true" 
+    alt="Promo 150rb" 
+    class="w-full object-cover"
+  />
+</div>
+
+
+<!-- Toggle tema -->
+<div class="theme-toggle-container mt-4">
+  <p class="theme-title">Kamu tim mana?</p>
+  <p class="theme-sub">Sisi gelap atau terang, ayo pilih di sini! 🌟</p>
+  
+  <label class="switch">
+    <input type="checkbox" id="toggleThemeBtn" />
+    <span class="slider round">
+      <span class="icon sun">☀️</span>
+      <span class="icon moon">🌙</span>
+    </span>
+  </label>
+</div>
+
+</section>
+<!-- Footer -->
+  <p class="footer-text">
+    DAVIGO Indonesia terdaftar serta diawasi oleh <br/>
+    <strong>Bank Sendiri </strong> dan <strong>Cipta </strong>
+  </p>
+</div>
+
+
+<!-- Section lain jangan nyambung -->
+<section id="activitySection" class="p-5 hidden">
+  <h2 class="text-lg font-semibold mb-3">Aktivitas</h2>
+  <div id="txnList" class="bg-white rounded-xl p-3">
+    <div class="empty-state" id="emptyTxn">Belum ada transaksi.</div>
+  </div>
+        <!-- syarat berfungsi riwayat trx -->
+      <div id="txnSummary" class="hidden p-4 font-semibold text-gray-800 text-lg"></div>
+<div id="txnList" class="hidden"></div>
+<div id="emptyTxn" class="hidden text-center text-gray-500 p-4">Belum ada transaksi</div>
+</section>
+
+<!-- ===== Pay/Minta/Kirim Bottom Sheet ala DANA ===== -->
+<div id="paySection" class="hidden fixed inset-0 z-30 flex flex-col justify-end">
+  <!-- backdrop -->
+  <div id="payBackdrop" class="absolute inset-0 bg-black bg-opacity-40"></div>
+  
+  <!-- card -->
+  <div id="payCard"
+       class="relative w-full bg-white rounded-t-2xl shadow-lg transform translate-y-full transition-transform duration-300">
+    
+    <!-- grip bar -->
+    <div class="flex justify-center mt-2">
+      <div class="w-12 h-1.5 bg-gray-300 rounded-full"></div>
+    </div>
+
+    <!-- tab menu -->
+    <div class="flex justify-around mt-3 border-b">
+      <button class="tabBtn py-2 px-4 font-semibold text-blue-600 border-b-2 border-blue-600" data-tab="0">PAY</button>
+      <button class="tabBtn py-2 px-4 text-gray-500" data-tab="1">MINTA</button>
+      <button class="tabBtn py-2 px-4 text-gray-500" data-tab="2">KIRIM</button>
+    </div>
+
+<!-- slider content -->
+<div id="tabSlider" class="flex transition-transform duration-300 w-full">
+  <!-- PAY -->
+  <div class="w-full flex-shrink-0 p-4 flex justify-center">
+    <div class="w-[85%] h-[60vh] bg-black rounded-xl overflow-hidden shadow-lg">
+      <iframe src="https://dfandrn.github.io/Qris-new-broh/" class="w-full h-full border-0"></iframe>
+    </div>
+  </div>
+  <!-- MINTA -->
+  <div class="w-full flex-shrink-0 p-4 flex items-center justify-center">
+    <p class="text-gray-600">Form Minta Uang (Coming Soon)</p>
+  </div>
+  <!-- KIRIM -->
+  <div class="w-full flex-shrink-0 p-4 flex items-center justify-center">
+    <p class="text-gray-600">Form Kirim Uang (Coming Soon)</p>
+  </div>
+</div>
+
+    <!-- tombol tutup -->
+    <div class="py-4 text-center">
+      <button id="closePay" class="text-blue-600 font-semibold">TUTUP</button>
+    </div>
+  </div>
+</div>
+
+<section id="walletSection" class="p-5 hidden">
+  <div class="bg-white rounded-xl p-4">
+    <h3 class="font-semibold mb-2">Dompet Saya</h3>
+    <ul class="text-sm text-gray-600 space-y-2">
+      <li>Bank tertaut: -</li>
+      <li>Kartu: -</li>
+      <li>Limit harian: Rp 5.000.000.000</li>
+    </ul>
+  </div>
+</section>
+    
+
+<!-- ======= Bottom Navigation (pakai IMG) ======= -->
+<nav class="bottom-nav">
+  <div class="row">
+
+    <!-- Beranda -->
+    <button id="tabHome" class="active">
+      <img src="icons/home.png" alt="Home" class="icon">
+      <span>Beranda</span>
+    </button>
+
+    <!-- Aktivitas -->
+    <button id="tabAktivitas">
+      <img src="icons/activity.png" alt="Aktivitas" class="icon">
+      <span>Aktivitas</span>
+    </button>
+
+    <!-- Pay/QRIS -->
+    <button id="tabPay">
+      <img src="icons/qris.png" alt="Pay QRIS" class="icon-pay">
+      <span>Pay/QRIS</span>
+    </button>
+
+    <!-- Dompet -->
+    <button id="tabWallet">
+      <img src="icons/wallet.png" alt="Dompet" class="icon">
+      <span>Dompet</span>
+    </button>
+
+    <!-- Exit -->
+    <button id="tabLogout">
+      <img src="icons/exit.png" alt="Exit" class="icon">
+      <span>Exit</span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Loading Skeleton -->
+<div id="gf-loading" class="fixed inset-0 bg-white z-[9999] hidden overflow-y-auto">
+  <div class="max-w-md mx-auto p-4 space-y-4 animate-pulse">
+    
+    <!-- ðŸ”´ Header -->
+    <h1 class="text-2xl font-bold text-red-600">GoFood</h1>
+    
+    <!-- ðŸ” Search Bar Skeleton -->
+    <div class="bg-gray-200 rounded-full h-10 shadow-inner"></div>
+    
+    <!-- ðŸŽžï¸ Promo Slider Skeleton -->
+    <div class="flex space-x-3 overflow-x-auto no-scrollbar">
+      <div class="skeleton-item bg-gray-200 rounded-lg shadow-xl w-40 h-24"></div>
+      <div class="skeleton-item bg-gray-200 rounded-lg shadow-xl w-40 h-24"></div>
+      <div class="skeleton-item bg-gray-200 rounded-lg shadow-xl w-40 h-24"></div>
+    </div>
+    
+    <!-- ðŸ½ï¸ Menu List Skeleton -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="skeleton-item bg-white rounded-lg shadow-xl p-2 flex flex-col">
+        <div class="bg-gray-200 rounded w-full h-32"></div>
+        <div class="mt-2 h-3 bg-gray-200 rounded w-3/4"></div>
+        <div class="mt-1 h-3 bg-gray-200 rounded w-1/2"></div>
+        <div class="mt-auto flex justify-between items-center pt-2">
+          <div class="h-3 bg-gray-200 rounded w-12"></div>
+          <div class="h-6 w-6 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+      
+      <div class="skeleton-item bg-white rounded-lg shadow-xl p-2 flex flex-col">
+        <div class="bg-gray-200 rounded w-full h-32"></div>
+        <div class="mt-2 h-3 bg-gray-200 rounded w-3/4"></div>
+        <div class="mt-1 h-3 bg-gray-200 rounded w-1/2"></div>
+        <div class="mt-auto flex justify-between items-center pt-2">
+          <div class="h-3 bg-gray-200 rounded w-12"></div>
+          <div class="h-6 w-6 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+      
+      <div class="skeleton-item bg-white rounded-lg shadow-xl p-2 flex flex-col">
+        <div class="bg-gray-200 rounded w-full h-32"></div>
+        <div class="mt-2 h-3 bg-gray-200 rounded w-3/4"></div>
+        <div class="mt-1 h-3 bg-gray-200 rounded w-1/2"></div>
+        <div class="mt-auto flex justify-between items-center pt-2">
+          <div class="h-3 bg-gray-200 rounded w-12"></div>
+          <div class="h-6 w-6 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+      
+      <div class="skeleton-item bg-white rounded-lg shadow-xl p-2 flex flex-col">
+        <div class="bg-gray-200 rounded w-full h-32"></div>
+        <div class="mt-2 h-3 bg-gray-200 rounded w-3/4"></div>
+        <div class="mt-1 h-3 bg-gray-200 rounded w-1/2"></div>
+        <div class="mt-auto flex justify-between items-center pt-2">
+          <div class="h-3 bg-gray-200 rounded w-12"></div>
+          <div class="h-6 w-6 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+
+      <div class="skeleton-item bg-white rounded-lg shadow-xl p-2 flex flex-col">
+        <div class="bg-gray-200 rounded w-full h-32"></div>
+        <div class="mt-2 h-3 bg-gray-200 rounded w-3/4"></div>
+        <div class="mt-1 h-3 bg-gray-200 rounded w-1/2"></div>
+        <div class="mt-auto flex justify-between items-center pt-2">
+          <div class="h-3 bg-gray-200 rounded w-12"></div>
+          <div class="h-6 w-6 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+
+      <div class="skeleton-item bg-white rounded-lg shadow-xl p-2 flex flex-col">
+        <div class="bg-gray-200 rounded w-full h-32"></div>
+        <div class="mt-2 h-3 bg-gray-200 rounded w-3/4"></div>
+        <div class="mt-1 h-3 bg-gray-200 rounded w-1/2"></div>
+        <div class="mt-auto flex justify-between items-center pt-2">
+          <div class="h-3 bg-gray-200 rounded w-12"></div>
+          <div class="h-6 w-6 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FULLSCREEN LAYOUT -->
+<div id="gf-layout" class="fixed inset-0 bg-gray-50 z-[9998] hidden overflow-auto">
+
+  <!-- Header -->
+  <div class="bg-white p-4 flex justify-between items-center shadow">  
+    <div class="flex items-center space-x-2">  
+      <h2 class="text-2xl font-extrabold text-red-600">GoFood</h2>  
+      <span class="bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">Murahh</span>  
+    </div>  
+    <div class="flex items-center space-x-3">  
+      <button id="aktivitas-btn" class="text-sm bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700">Aktivitas</button>  
+      <button id="gf-close" class="text-gray-900 text-lg font-bold hover:scale-110 transition">&times;</button>  
+    </div>  
+  </div> 
+
+  <!-- Banner + Carousel Promo -->
+  <div class="px-4 pt-3 relative mt-3">
+    <div class="relative overflow-hidden rounded-xl shadow-md">
+      <div id="promo-carousel" class="flex transition-transform duration-500">
+        <img src="https://raw.githubusercontent.com/dfandrn/img/main/promo_makan_murah.jpg" />
+        <img src="https://raw.githubusercontent.com/dfandrn/img/main/Acquisition_Surga_Makanan_Blog_1456x818_copy_9a90f08e43.jpg" />
+        <img src="https://raw.githubusercontent.com/dfandrn/img/main/Promo_Maksimal_FS_Mealtimes_Jan_Blog_1456x818_dc9b04c3d4.jpg" />
+      </div>
+    </div>
+    <!-- Carousel dots -->
+    <div id="carousel-indicators" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20"></div>
+  </div>
+
+  <!-- Search dengan efek -->
+  <div class="px-4 mt-5">
+    <div id="search-wrapper" 
+         class="flex items-center bg-white rounded-full px-3 py-1.5 mb-2 
+                shadow-md border border-transparent
+                transition-all duration-300"> 
+      <span class="text-gray-400 mr-2">ðŸ”</span>
+      <input id="search-menu" 
+             type="text" 
+             placeholder="cari makanan favoritmu..."
+             class="flex-1 outline-none text-base text-gray-700 placeholder-gray-400" />
+    </div>
+  </div>
+
+  <!-- Teks Hemat -->
+  <div class="px-4 mt-3">
+    <p class="font-bold text-red-600 text-base md:text-lg">Hemat dan Murah</p>
+  </div>
+
+  <!-- Filter Promo + Kategori -->
+  <div class="px-4 mt-2 border-b border-gray-200 pb-2 relative">
+    <div class="flex items-center space-x-3 mb-2">
+      <button id="promo-btn" class="bg-red-600 text-white text-xs px-3 py-1 rounded-full hover:bg-red-700 transition">
+        Promo Spesial 
+      </button>
+    </div>
+    <div id="category-bar" class="flex space-x-4 overflow-x-auto no-scrollbar"></div>
+  </div>
+
+  <!-- Menu List dengan card lebih panjang -->
+  <div id="menu-list" class="w-full max-w-md mx-auto grid grid-cols-2 gap-4 p-4"></div>
+
+  <!-- Riwayat & Bayar -->
+  <div id="cart-layout" class="p-4 border-t mt-2 bg-gray-50 hidden">
+    <h3 class="font-bold text-red-600 mb-2">Riwayat Pesanan</h3>
+    <ul id="cart-list" class="text-sm mb-2 text-gray-900"></ul>
+    <div class="flex justify-between font-bold text-red-600 mb-2">
+      <span>Total</span>
+      <span id="cart-total">Rp0</span>
+    </div>
+    <button id="pay-btn" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Bayar</button>
+  </div>
+</div>
+
+<!-- Layout Aktivitas -->
+<div id="aktivitas-layout" class="fixed inset-0 bg-gray-100 z-[9999] hidden overflow-y-auto">  
+  <div class="bg-white p-4 flex justify-between items-center shadow">  
+    <h2 class="text-xl font-bold text-red-600">Aktivitas</h2>  
+    <button id="aktivitas-close" class="text-gray-900 text-lg font-bold hover:scale-110">&times;</button>  
+  </div>  
+  <div id="tx-list" class="p-4 space-y-3"></div>  
+</div>
+
+<!-- Overlay Detail Transaksi -->
+<div id="tx-detail-layout" class="fixed inset-0 bg-gray-100 z-[10000] hidden overflow-y-auto">
+  <div class="bg-white p-4 flex justify-between items-center shadow">
+    <h2 class="text-xl font-bold text-red-600">Detail Transaksi</h2>
+    <button id="tx-detail-close" class="text-gray-900 text-lg font-bold hover:scale-110">&times;</button>
+  </div>
+  <div id="tx-detail-list" class="p-4 space-y-3"></div>
+</div>
+
+
+<!-- ======= MODAL VERIFIKASI AWAL (LOGIN) - PROFESSIONAL E-WALLET STYLE ======= -->
+<div id="startupVerify" class="fixed inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex items-center justify-center p-4 z-50">
+  <!-- Background Effects -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute top-3/4 right-1/4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-1/4 left-3/4 w-40 h-40 bg-pink-500/20 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
+  </div>
+  
+  <!-- Main Container -->
+  <div class="relative w-full max-w-md">
+    <!-- Progress Indicator -->
+    <div class="mb-8">
+      <div class="flex justify-center space-x-3 mb-4">
+        <div id="progressStep1" class="step-indicator active">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+          </svg>
+        </div>
+        <div id="progressStep2" class="step-indicator">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div id="progressStep3" class="step-indicator">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div id="progressStep4" class="step-indicator">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2L3 9l7 7 7-7-7-7z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bg-gray-200/20 rounded-full h-1 backdrop-blur-sm">
+        <div id="progressBar" class="bg-gradient-to-r from-blue-400 to-purple-500 h-1 rounded-full transition-all duration-500 ease-out" style="width: 25%"></div>
+      </div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
+      <!-- Glowing Header -->
+      <div class="relative bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-6 text-center border-b border-white/10">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 animate-pulse"></div>
+        <div class="relative">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl shadow-blue-500/25">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-2">Verifikasi Akun</h2>
+          <p class="text-blue-100 text-sm">Masuk untuk melanjutkan ke beranda</p>
+        </div>
+      </div>
+
+            <!-- Content Area -->
+      <div class="p-6">
+        <!-- Step 1: Nomor HP -->
+        <div id="verifyStepPhone" class="step-content">
+          <div class="text-center mb-6">
+            <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Verifikasi Nomor HP</h3>
+            <p class="text-gray-300 text-sm">Masukkan nomor HP yang terdaftar</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-300 mb-2">Nomor HP</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <span class="text-gray-400 text-sm">+62</span>
+                </div>
+                <input 
+                  type="tel" 
+                  id="startupPhone" 
+                  placeholder="8xxxxxxxxxx" 
+                  inputmode="numeric"
+                  class="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-sm text-base"
+                />
+                <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400/0 to-purple-400/0 opacity-0 transition-opacity duration-300 pointer-events-none input-glow"></div>
+              </div>
+            </div>
+
+            <button onclick="startupSendOTP()" class="w-full btn-gradient-primary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+              Kirim OTP
+            </button>
+
+            <button id="havePinBtn" class="w-full btn-gradient-secondary">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+              </svg>
+              Sudah punya PIN
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: OTP -->
+        <div id="verifyStepOTP" class="step-content hidden">
+          <div class="text-center mb-6">
+            <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Masukkan Kode OTP</h3>
+            <p class="text-gray-300 text-sm">Kode OTP telah dikirim ke nomor HP Anda</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-300 mb-2">Kode OTP</label>
+              <input 
+                type="text" 
+                id="startupOTP" 
+                placeholder="• • • • • •" 
+                inputmode="numeric" 
+                maxlength="6"
+                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 focus:outline-none transition-all duration-300 backdrop-blur-sm text-center text-lg tracking-widest font-mono text-base"
+              />
+            </div>
+
+            <button onclick="startupVerifyOTP()" class="w-full btn-gradient-primary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Verifikasi OTP
+            </button>
+
+            <button onclick="startupResendOTP()" class="w-full btn-text">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+              Kirim Ulang OTP
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Set PIN baru -->
+        <div id="verifyStepSetPIN" class="step-content hidden">
+          <div class="text-center mb-6">
+            <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Buat PIN Keamanan</h3>
+            <p class="text-gray-300 text-sm">Buat PIN 6 digit untuk keamanan akun Anda</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-300 mb-2">PIN Baru</label>
+              <input 
+                type="password" 
+                id="startupSetPIN1" 
+                placeholder="• • • • • •" 
+                maxlength="6" 
+                inputmode="numeric"
+                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 focus:outline-none transition-all duration-300 backdrop-blur-sm text-center text-lg tracking-widest font-mono text-base"
+              />
+            </div>
+
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-300 mb-2">Konfirmasi PIN</label>
+              <input 
+                type="password" 
+                id="startupSetPIN2" 
+                placeholder="• • • • • •" 
+                maxlength="6" 
+                inputmode="numeric"
+                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 focus:outline-none transition-all duration-300 backdrop-blur-sm text-center text-lg tracking-widest font-mono text-base"
+              />
+            </div>
+
+            <button onclick="startupSavePIN()" class="w-full btn-gradient-primary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+              Simpan PIN
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 4: Masukkan PIN -->
+        <div id="verifyStepPIN" class="step-content hidden">
+          <div class="text-center mb-6">
+            <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2L3 9l7 7 7-7-7-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Masukkan PIN</h3>
+            <p class="text-gray-300 text-sm">Gunakan PIN keamanan untuk masuk</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-300 mb-2">PIN Keamanan</label>
+              <input 
+                type="password" 
+                id="startupPIN" 
+                placeholder="• • • • • •" 
+                maxlength="6" 
+                inputmode="numeric"
+                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 focus:outline-none transition-all duration-300 backdrop-blur-sm text-center text-lg tracking-widest font-mono text-base"
+              />
+            </div>
+
+            <button onclick="startupVerifyPIN()" class="w-full btn-gradient-primary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+              </svg>
+              Masuk
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="mt-6 text-center">
+      <div class="flex items-center justify-center space-x-4 text-white/60 text-xs">
+        <div class="flex items-center">
+          <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Aman & Terenkripsi</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Terpercaya</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ======= SHEET PULSA/DATA Dana-style ======= -->
+<div id="pulsaSheet" class="sheet">
+  <div class="sheet-header bg-blue-600 text-white flex justify-between items-center px-4 py-3">
+    <span class="font-semibold text-lg">Pulsa & Paket Data</span>
+    <button class="closeSheetBtn text-white text-2xl leading-none">&times;</button>
+  </div>
+  <div class="body">
+    <!-- Nomor HP -->
+    <div class="bg-white rounded-xl p-4 shadow-sm border mb-4">
+      <label class="text-xs text-gray-500 font-medium">Nomor HP</label>
+      <input id="pulsaPhone" type="tel" placeholder="08xxxxxxxxxx"
+             class="w-full border border-gray-200 rounded-lg px-3 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-400" 
+             inputmode="numeric">
+    </div>
+
+    <!-- Pilih Nominal -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h4 class="font-semibold text-gray-700">Pilih Nominal</h4>
+        <button id="pulsaReset" class="text-xs underline text-gray-500 hover:text-gray-700">Reset</button>
+      </div>
+      <div id="pulsaGrid" class="grid grid-cols-3 gap-3">
+        <!-- JS inject card -->
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div id="pulsaSummary" class="bg-gradient-to-b from-blue-50 to-white border border-blue-100 rounded-2xl p-4 hidden shadow-sm">
+      <div class="flex justify-between text-sm mb-1">
+        <span class="text-gray-600">Harga</span><span id="pulsaHarga" class="font-semibold text-gray-800">Rp0</span>
+      </div>
+      <div class="flex justify-between text-sm mb-1">
+        <span class="text-gray-600">Diskon</span><span id="pulsaDiskon" class="font-semibold text-red-500">- Rp0</span>
+      </div>
+      <div class="flex justify-between text-sm font-semibold text-gray-900 mb-3">
+        <span>Total Bayar</span><span id="pulsaTotal">Rp0</span>
+      </div>
+      <button id="pulsaBayar" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold shadow-md hover:shadow-lg transition-all">
+        Bayar Sekarang
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ======= SHEET LISTRIK (mirip Pulsa) ======= -->
+<div id="listrikSheet" class="sheet">
+  <div class="sheet-header bg-blue-600 text-white flex justify-between items-center px-4 py-3">
+    <span class="font-semibold text-lg">Listrik Prabayar</span>
+    <button class="closeSheetBtn text-white text-2xl leading-none">&times;</button>
+  </div>
+
+  <div class="body">
+    <!-- ID Pelanggan -->
+    <div class="bg-white rounded-xl p-4 shadow-sm border mb-4">
+      <label class="text-xs text-gray-500 font-medium">No. Meter / ID Pelanggan</label>
+      <input id="plnId" type="text" placeholder="11/12 digit" 
+             class="w-full border border-gray-200 rounded-lg px-3 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-400" 
+             inputmode="numeric">
+      <div id="plnInfo" class="text-xs text-gray-500 mt-2 hidden">
+        Nama: <span id="plnNama">-</span> • Daya: <span id="plnDaya">-</span>
+      </div>
+    </div>
+
+    <!-- Pilih Nominal Token -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h4 class="font-semibold text-gray-700">Pilih Nominal Token</h4>
+        <button id="plnReset" class="text-xs underline text-gray-500 hover:text-gray-700">Reset</button>
+      </div>
+      <div id="plnGrid" class="grid grid-cols-3 gap-3">
+        <!-- JS inject card -->
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div id="plnSummary" class="bg-gradient-to-b from-blue-50 to-white border border-blue-100 rounded-2xl p-4 hidden shadow-sm">
+      <div class="flex justify-between text-sm mb-1">
+        <span class="text-gray-600">Harga</span><span id="plnHarga" class="font-semibold text-gray-800">Rp0</span>
+      </div>
+      <div class="flex justify-between text-sm mb-1">
+        <span class="text-gray-600">Biaya Admin</span><span id="plnAdmin" class="font-semibold text-gray-800">Rp0</span>
+      </div>
+      <div class="flex justify-between text-sm mb-1">
+        <span class="text-gray-600">Diskon</span><span id="plnDiskon" class="font-semibold text-red-500">- Rp0</span>        
+      </div>
+      <div class="flex justify-between text-sm font-semibold text-gray-900 mb-3">
+        <span>Total Bayar</span><span id="plnTotal">Rp0</span>
+      </div>
+      <button id="plnBayar" 
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold shadow-md hover:shadow-lg transition-all">
+        Bayar Sekarang
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ======= SHEET GAME (mirip Pulsa) ======= -->
+<div id="topUpGameSheet" class="sheet">
+  <div class="sheet-header bg-blue-600 text-white flex justify-between items-center px-4 py-3">
+    <span class="font-semibold text-lg">Top Up Game</span>
+    <button class="closeSheetBtn text-white text-2xl leading-none">&times;</button>
+  </div>
+
+  <div class="body">
+    <!-- Logo game yang dipilih -->
+    <div id="selectedGame" class="flex justify-center mb-3 hidden">
+      <img id="gameLogo" src="" alt="Game Logo" class="w-16 h-16">
+    </div>
+
+    <!-- Pilih game -->
+    <h4 class="font-semibold mb-2 text-gray-700">🔥 Game Populer 🔥</h4>
+    <div id="gameList" class="grid grid-cols-2 gap-3 mb-3">
+      <!-- JS inject game cards -->
+    </div>
+
+    <!-- Input ID player -->
+    <div class="bg-white rounded-xl p-4 shadow-sm border mb-4">
+      <label class="text-xs text-gray-500 font-medium">Player ID</label>
+      <input id="gameUserId" type="text" placeholder="Masukkan ID Player" 
+             class="w-full border border-gray-200 rounded-lg px-3 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- Pilih nominal -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h4 class="font-semibold text-gray-700">Pilih Nominal</h4>
+        <button id="gameReset" class="text-xs underline text-gray-500 hover:text-gray-700">Reset</button>
+      </div>
+      <div id="gameGrid" class="grid grid-cols-2 gap-3">
+        <!-- JS inject nominal cards -->
+      </div>
+    </div>
+
+    <!-- Ringkasan pembayaran -->
+    <div id="gameSummary" class="bg-gradient-to-b from-purple-50 to-white border border-purple-100 rounded-2xl p-4 hidden shadow-sm">
+      <div class="flex justify-between text-sm mb-1">
+        <span class="text-gray-600">Harga</span><span id="gameHarga" class="font-semibold text-gray-800">Rp0</span>
+      </div>
+      <div class="flex justify-between text-sm mb-1">
+        <span class="text-gray-600">Diskon</span><span id="gameDiskon" class="font-semibold text-red-500">- Rp0</span>
+      </div>
+      <div class="flex justify-between text-sm font-semibold text-gray-900 mb-3">
+        <span>Total Bayar</span><span id="gameTotal">Rp0</span>
+      </div>
+      <button id="gameBayar" 
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold shadow-md hover:shadow-lg transition-all">
+        Bayar Sekarang
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ======= SHEET DAVIGO POINT (Dana-style) ======= -->
+<div id="davigoPointSheet" class="sheet">
+  <!-- Header Dana-style -->
+  <div class="sheet-header flex justify-between items-center px-4 py-3">
+    <span class="font-semibold text-lg text-white">Davigo Point</span>
+    <button class="closeSheetBtn text-white text-2xl leading-none">&times;</button>
+  </div>
+
+  <div class="body">
+    <!-- Canvas game -->
+    <canvas id="carGame" width="300" height="400" 
+      class="mx-auto border rounded-lg bg-gray-100 shadow-sm"></canvas>
+
+    <!-- Kontrol layar -->
+    <div class="flex justify-center gap-6 mt-4">
+      <button id="leftBtn" 
+        class="bg-gray-200 hover:bg-gray-300 px-5 py-3 rounded-full text-xl shadow transition-colors">
+        ◀️
+      </button>
+      <button id="rightBtn" 
+        class="bg-gray-200 hover:bg-gray-300 px-5 py-3 rounded-full text-xl shadow transition-colors">
+        ▶️
+      </button>
+    </div>
+
+    <!-- Info skor & coin -->
+    <div class="mt-4 text-center space-y-1">
+      <p class="text-sm text-gray-700">Score: <span id="score" class="font-semibold">0</span></p>
+      <p class="text-sm text-gray-700">Coin Kamu: <span id="coins" class="font-semibold">0</span></p>
+      
+      <button id="redeemBtn" 
+        class="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl font-semibold shadow-md transition-all">
+        Tukar Coin ke Saldo
+      </button>
+
+      <button id="carRestartBtn" 
+        class="mt-2 w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl font-semibold shadow-md transition-all">
+        Mulai Ulang
+      </button> 
+    </div>
+  </div>
+</div>
+
+<!-- ================== LOADING OVERLAY ================== -->
+<div id="gf-loading" class="fixed inset-0 bg-white z-[9999] hidden flex flex-col items-center justify-start pt-12 px-4 overflow-auto">
+  <!-- Skeleton Container -->
+  <div class="w-full max-w-md space-y-4">
+    <!-- Template Skeleton Item -->
+    <template id="skeleton-template">
+      <div class="flex items-center space-x-4 animate-pulse bg-gray-100 rounded-lg p-3 shadow-xl">
+        <div class="w-12 h-12 bg-gray-300 rounded-full flex-shrink-0 shadow-inner"></div>
+        <div class="flex-1 space-y-2">
+          <div class="h-4 bg-gray-300 rounded w-3/4 shadow-inner"></div>
+          <div class="h-3 bg-gray-300 rounded w-1/2 shadow-inner"></div>
+          <div class="h-6 bg-gray-300 rounded w-1/4 mt-1 shadow-inner"></div>
+        </div>
+      </div>
+    </template>
+    
+    <div id="skeleton-list"></div>
+    
+    <p class="text-red-800 font-bold text-sm mt-4 text-center">Loading menu...</p>
+  </div>
+</div>
+
+
+
+<!-- OVERLAY PEMBAYARAN FULL SCREEN -->  <div id="overlaySuma" class="fixed inset-0 bg-white hidden z-50 overflow-y-auto">  
+  <div class="min-h-full">  
+    <!-- Header -->  
+    <div class="sticky top-0 bg-white border-b border-gray-200 px-4 py-4 flex items-center justify-between shadow-sm">  
+      <h2 class="text-xl font-bold text-gray-900">Pilih Metode Pembayaran</h2>  
+      <button id="close" class="p-2 hover:bg-gray-100 rounded-full transition-colors">  
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>  
+        </svg>  
+      </button>  
+    </div>  <!-- Content -->  
+<div class="p-4 pb-20">  
+  <!-- QRIS Section -->  
+  <div class="mb-6">  
+    <h3 class="text-lg font-semibold mb-3 text-gray-800">Quick Response (QR)</h3>  
+    <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+      <div class="flex items-center">  
+        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-3">  
+          <span class="text-white font-bold">QR</span>  
+        </div>  
+        <span class="font-medium">QRIS (Quick Response Indonesian Standard)</span>  
+      </div>  
+      <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+      </svg>  
+    </button>  
+  </div>  
+    
+  <!-- E-Wallet Section -->  
+  <div class="mb-6">  
+    <h3 class="text-lg font-semibold mb-3 text-gray-800">E-Wallet</h3>  
+    <div class="space-y-2">  
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">OVO</span>  
+          </div>  
+          <span class="font-medium">OVO</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+        
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">DANA</span>  
+          </div>  
+          <span class="font-medium">DANA</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+        
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">GO</span>  
+          </div>  
+          <span class="font-medium">GoPay</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+        
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">SL</span>  
+          </div>  
+          <span class="font-medium">ShopeePay</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+    </div>  
+  </div>  
+    
+  <!-- Virtual Account Section -->  
+  <div class="mb-6">  
+    <h3 class="text-lg font-semibold mb-3 text-gray-800">Virtual Account</h3>  
+    <div class="space-y-2">  
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">BCA</span>  
+          </div>  
+          <span class="font-medium">BCA Virtual Account</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+        
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-red-700 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">BNI</span>  
+          </div>  
+          <span class="font-medium">BNI Virtual Account</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+        
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-green-700 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">BRI</span>  
+          </div>  
+          <span class="font-medium">BRI Virtual Account</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+    </div>  
+  </div>  
+    
+  <!-- Retail Section -->  
+  <div class="mb-6">  
+    <h3 class="text-lg font-semibold mb-3 text-gray-800">Retail/Minimarket</h3>  
+    <div class="space-y-2">  
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">IDM</span>  
+          </div>  
+          <span class="font-medium">Indomaret</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+        
+      <button class="pay-btn w-full p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center justify-between">  
+        <div class="flex items-center">  
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-3">  
+            <span class="text-white font-bold text-xs">ALF</span>  
+          </div>  
+          <span class="font-medium">Alfamart</span>  
+        </div>  
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">  
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>  
+        </svg>  
+      </button>  
+    </div>  
+  </div>  
+</div>  
+  
+<!-- Footer -->  
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">  
+  <button id="cancelPayment" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-3 rounded-xl transition-colors">  
+    🪸
+  </button>  
+</div>
+  </div>  
+</div>
+
+<!-- POPUP INPUT NOMINAL -->
+<div id="amountPopup" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl w-80 max-w-full p-5 shadow-lg animate-slideUp">
+    <h3 id="popupTitle" class="text-lg font-bold mb-4">Masukkan Nominal</h3>
+    <input id="amountInput" type="number" placeholder="Masukkan nominal" 
+           class="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring focus:ring-blue-300"/>
+    <div class="flex space-x-2">
+      <button id="confirmAmount" class="flex-1 bg-blue-600 text-white p-2 rounded-lg">OK</button>
+      <button id="cancelAmount" class="flex-1 bg-gray-200 p-2 rounded-lg">Batal</button>
+    </div>
+  </div>
+</div>
+
+<!-- FULLSCREEN googleplay layout khusus voucher -->
+<div id="gplayModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+  
+<!-- Loading Spinner Google Play Gradient -->  <div id="loadingSpinner" class="flex flex-col items-center">  
+  <div class="w-10 h-10 mb-2 relative">  
+    <div class="absolute inset-0 rounded-full border-4 border-t-red-500 border-r-green-500 border-b-white-500 border-l-blue-500 animate-spin"></div>  
+  </div>  
+  <p class="text-white font-medium text-sm">Loading...</p>  
+</div>  
+
+  <!-- Isi modal (disembunyikan dulu, nanti muncul dengan animasi) -->
+<div id="modalContent" class="absolute inset-0 bg-white rounded-t-2xl shadow-lg p-5 overflow-y-auto hidden">
+
+  <!-- Tombol close -->
+  <button id="closeModal" 
+          class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-2xl font-bold">✕</button>
+
+  <!-- HEADER -->
+  <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center space-x-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" 
+           alt="Google Play" class="h-6">
+      <span class="font-bold text-gray-800">Rewards</span>
+    </div>
+  </div>
+
+  <!-- Selamat datang -->
+  <h2 class="text-lg font-bold text-gray-800 mb-2">Selamat datang di Zona Google Play</h2>
+
+  <!-- ===== Main Page ===== -->
+  <div id="mainPage" class="page active" style="position:relative;">
+    <!-- Voucher & Akun card -->
+    <div class="card">
+      <div class="row">
+        <div>
+          <div style="font-weight:700">Voucher saya</div>
+          <div class="small">Lihat semua voucher saya</div>
+        </div>
+        <button id="openVoucherFull" class="btn-primary">Di sini</button>
+      </div>
+    </div>
+    
+    <!-- Tabs -->
+    <div class="voucher-tabs" id="tabs">
+      <button class="tab" data-category="all">All</button>
+      <button class="tab" data-category="googleplay">Google Play</button>
+      <button class="tab" data-category="entertainment">YouTube</button>
+      <button class="tab" data-category="games">Games</button>
+      <button class="tab" data-category="shopping">Shopping</button>
+      <button class="tab" data-category="food">Food</button>
+      <button class="tab" data-category="travel">Travel</button>
+      <!-- tambahkan lagi jika perlu -->
+    </div>
+
+    <!-- Tab loading -->
+    <div id="tabLoading"><div style="width:20px;height:20px;border:3px solid #cbd5e1;border-top-color:transparent;border-radius:50%;animation:spin .7s linear infinite"></div><div>Loading kupon...</div></div>
+
+    <!-- Voucher list -->
+    <div id="voucherList">
+      <!-- beberapa contoh voucher -->
+      <div class="coupon-card" data-category="googleplay">
+        <div class="left">
+          <img class="coupon-img" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="">
+          <div class="coupon-info"><h3>Google Play 200GB Trial</h3><p>Untuk pengguna baru Google One</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+
+      <div class="coupon-card" data-category="googleplay">
+        <div class="left">
+          <img class="coupon-img" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="">
+          <div class="coupon-info"><h3>Voucher Rp5.000</h3><p>Min. pembelian Rp35.000</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+
+      <div class="coupon-card" data-category="entertainment">
+        <div class="left">
+          <img class="coupon-img" src="https://img.icons8.com/color/48/youtube-play.png" alt="">
+          <div class="coupon-info"><h3>YouTube Premium</h3><p>Gratis 1 bulan</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+      
+            <div class="coupon-card" data-category="entertainment">
+        <div class="left">
+          <img class="coupon-img" src="https://img.icons8.com/color/48/youtube-play.png" alt="">
+          <div class="coupon-info"><h3>YouTube Premium</h3><p>Gratis 1 bulan</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+      
+            <div class="coupon-card" data-category="entertainment">
+        <div class="left">
+          <img class="coupon-img" src="https://img.icons8.com/color/48/youtube-play.png" alt="">
+          <div class="coupon-info"><h3>YouTube Premium</h3><p>Gratis 1 bulan</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+      
+            <div class="coupon-card" data-category="entertainment">
+        <div class="left">
+          <img class="coupon-img" src="https://img.icons8.com/color/48/youtube-play.png" alt="">
+          <div class="coupon-info"><h3>YouTube Premium</h3><p>Gratis 1 bulan</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+      
+            <div class="coupon-card" data-category="entertainment">
+        <div class="left">
+          <img class="coupon-img" src="https://img.icons8.com/color/48/youtube-play.png" alt="">
+          <div class="coupon-info"><h3>YouTube Premium</h3><p>Gratis 1 bulan</p></div>
+        </div>
+        
+        <button class="claim-btn">KLAIM</button>
+      </div>
+      <div class="coupon-card" data-category="games">
+        <div class="left">
+          <img class="coupon-img" src="https://img.icons8.com/color/48/controller.png" alt="">
+          <div class="coupon-info"><h3>Game Credits</h3><p>Voucher khusus game</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+      
+      <div class="coupon-card" data-category="games">
+        <div class="left">
+          <img class="coupon-img" src="https://img.icons8.com/color/48/controller.png" alt="">
+          <div class="coupon-info"><h3>Bonus Item</h3><p>Skin eksklusif gratis</p></div>
+        </div>
+        <button class="claim-btn">KLAIM</button>
+      </div>
+      <!--tambahin voucher di sini-->
+    </div>
+  </div>
+
+  <!-- ===== Fullscreen Voucher Page ===== -->
+  <div id="voucherPage" class="page" aria-hidden="true">
+    <div class="topbar">
+      <button id="backBtn" class="back-btn">� Kembali</button>
+      <div style="font-weight:700" id="voucherPageTitle">Voucher</div>
+    </div>
+    
+    <!-- ===== Halaman Voucher (Full Screen) ===== -->
+  <div id="voucherdi">
+    <div class="voucher-header">
+      <h2>Reward Saya</h2>
+      <p style="font-size:12px">Cek vouchermu disini!</p>
+    </div>
+    
+  <!-- Banner promo -->
+  <div class="w-full h-28 rounded-lg overflow-hidden mb-4">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Google_Play_2022_logo.svg" 
+         class="w-full h-full object-cover" alt="Promo Banner">
+  </div>
+    <!-- Tabs -->
+    <div class="voucher-tabs">
+      <button class="active" onclick="switchTab('voucher', this)">Voucher</button>
+      <button onclick="switchTab('kartu', this)">Kartu</button>
+      <button onclick="switchTab('langganan', this)">Langganan</button>
+    </div>
+
+    <!-- tempat isi voucher full screen (diisi lewat JS saat buka)
+    -->
+    <div id="voucherPageContent"></div>
+  </div>
+  
+
+
+
+  <!-- JS dipanggil di akhir BODY -->
+  <script src="script.js"></script>
+    
+</body> 
+  </html>
