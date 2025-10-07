@@ -1445,32 +1445,8 @@ body.dark-mode .notif-time {
   background: #005BBB;
 }
 
-  /* Deals promo voucer */
-  .deals-section { margin-bottom: 20px;}
-  .deals-header {display: flex;justify-content: space-between; align-items: center;margin-bottom: 12px;}
-  .deals-header h3 {font-weight: 700;  margin: 0;}
-  .btn-explore {font-weight: 700;font-size: 12px;padding: 6px 12px;border-radius: 15px;background: none;border: 1px solid #007AFF; color: #007AFF;cursor: pointer;transition: all 0.2s;
-  }.btn-explore:hover {background-color: #007AFF;
-   color: white;}.voucher {position: relative;display: 
-   flex;justify-content: space-between; align-items: center;
-   border-radius: 12px;padding: 10px 14px;margin-bottom: 12px;
-   cursor: pointer;box-shadow: 0 1px 4px rgb(0 0 0 / 0.05);}
-  .voucher-blue {background-color: #007AFF;color: white;}
-  .voucher-yellow {background-color: #FFD600;color: #242424;}
-  .voucher-info { display: flex;flex-direction: column;gap: 4px;}
-  .voucher-label {font-size: 12px;font-weight: 600;}
-  .voucher-value {font-size: 18px;font-weight: 800;}
-  .voucher-value b {font-weight: 800;}
-  .voucher-desc {font-size: 11px;opacity: 0.9;}
-  .voucher-price {font-weight: 700;font-size: 16px; background: white; border-radius: 10px;color: #007AFF;padding: 8px 12px;min-width: 80px;text-align: center;}
-  .discount-badge {position: absolute;top: 8px;right: 12px;
-  background: #0a8400;font-weight: 600; font-size: 11px;
-  padding: 2px 6px;border-radius: 0 0 6px 6px;color: white;
-  user-select: none;}
-  .voucher-yellow .discount-badge {background: #0a8400;}
 
 
- 
   /* News Section */
   .news-section {
     border: 1px solid #ddd;
