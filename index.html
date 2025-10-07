@@ -664,8 +664,13 @@
 <!-- FULLSCREEN LAYOUT -->
 <div id="gf-layout" class="fixed inset-0 bg-gray-50 z-[9998] hidden overflow-auto">
 
+<!-- Garis merah + Header dengan efek glow -->
+<div class="bg-red-600 pt-4 relative">
+  <!-- Efek glow halus dari atas -->
+  <div class="absolute top-0 left-0 w-full h-6 bg-gradient-to-b from-white/50 to-transparent blur-md"></div>
+
   <!-- Header -->
-  <div class="bg-white p-4 flex justify-between items-center shadow">  
+  <div class="bg-white relative z-10 p-4 flex justify-between items-center shadow-md rounded-t-2xl">  
     <div class="flex items-center space-x-2">  
       <h2 class="text-2xl font-extrabold text-red-600">GoFood</h2>  
       <span class="bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">Murahh</span>  
@@ -674,7 +679,8 @@
       <button id="aktivitas-btn" class="text-sm bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700">Aktivitas</button>  
       <button id="gf-close" class="text-gray-900 text-lg font-bold hover:scale-110 transition">&times;</button>  
     </div>  
-  </div> 
+  </div>  
+</div>
 
   <!-- Banner + Carousel Promo -->
   <div class="px-4 pt-3 relative mt-3">
