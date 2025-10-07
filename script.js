@@ -3866,3 +3866,102 @@ function toggleSaldoVisibility(isMainCard = true) {
 
 })();
 
+//garis ombak menu
+document.addEventListener("DOMContentLoaded", () => {
+  const homeSection = document.getElementById("homeSection");
+  if (!homeSection) return;
+  
+  // Container utama ombak
+  const waveContainer = document.createElement("div");
+  Object.assign(waveContainer.style, {
+    position: "relative",
+    overflow: "hidden",
+    borderRadius: "18px",
+    background: "white",
+    boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
+    marginBottom: "20px",
+  });
+  
+  // SVG Ombak dinamis realistis
+  const wave = document.createElement("div");
+  wave.innerHTML = `
+    <svg viewBox="0 0 500 80" preserveAspectRatio="none"
+      style="position:absolute;top:0;left:0;width:100%;height:55px;">
+      <defs>
+        <linearGradient id="gradBlue1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2563eb"/>
+          <stop offset="100%" stop-color="#3b82f6"/>
+        </linearGradient>
+        <linearGradient id="gradBlue2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1e40af"/>
+          <stop offset="100%" stop-color="#2563eb"/>
+        </linearGradient>
+
+        <style>
+          @keyframes waveBack {
+            0%   { d: path("M0,35 C150,75 350,15 500,45 L500,00 L0,0 Z"); }
+            25%  { d: path("M0,30 C150,65 350,25 500,40 L500,00 L0,0 Z"); }
+            50%  { d: path("M0,33 C150,78 350,18 500,43 L500,00 L0,0 Z"); }
+            75%  { d: path("M0,28 C150,70 350,25 500,38 L500,00 L0,0 Z"); }
+            100% { d: path("M0,35 C150,75 350,15 500,45 L500,00 L0,0 Z"); }
+          }
+
+          @keyframes waveFront {
+            0%   { d: path("M0,38 C150,68 350,25 500,48 L500,00 L0,0 Z"); }
+            25%  { d: path("M0,33 C150,60 350,30 500,42 L500,00 L0,0 Z"); }
+            50%  { d: path("M0,36 C150,70 350,22 500,46 L500,00 L0,0 Z"); }
+            75%  { d: path("M0,31 C150,63 350,28 500,40 L500,00 L0,0 Z"); }
+            100% { d: path("M0,38 C150,68 350,25 500,48 L500,00 L0,0 Z"); }
+          }
+
+          /* Gelombang belakang: lambat, tenang */
+          .wave1 {
+            animation: waveBack 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+            opacity: 0.6;
+          }
+
+          /* Gelombang depan: lebih cepat, bervariasi */
+          .wave2 {
+            animation: waveFront 6s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+            animation-delay: -2s;
+            opacity: 1;
+          }
+
+          /* Efek variasi kecepatan alami (accelerate + decelerate) */
+          @keyframes speedShift {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
+          }
+
+          .wave1, .wave2 {
+            transform-origin: center;
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+          }
+        </style>
+      </defs>
+
+      <path class="wave1" d="M0,35 C150,75 350,15 500,45 L500,00 L0,0 Z"
+        style="stroke:none;fill:url(#gradBlue2);"></path>
+
+      <path class="wave2" d="M0,38 C150,68 350,25 500,48 L500,00 L0,0 Z"
+        style="stroke:none;fill:url(#gradBlue1);"></path>
+    </svg>
+  `;
+  
+  // Bungkus isi lama tanpa hapus event/icon
+  const contentWrapper = document.createElement("div");
+  contentWrapper.style.paddingTop = "45px";
+  while (homeSection.firstChild) {
+    contentWrapper.appendChild(homeSection.firstChild);
+  }
+  
+  waveContainer.appendChild(wave);
+  waveContainer.appendChild(contentWrapper);
+  homeSection.appendChild(waveContainer);
+  
+  // Background lembut
+  Object.assign(homeSection.style, {
+    background: "#f8fafc",
+    padding: "20px",
+  });
+});
